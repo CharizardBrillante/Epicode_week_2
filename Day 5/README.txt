@@ -1,0 +1,2 @@
+Non si vedono le icone di fontawesome siccome per mostrarle a schermo serve che tutta la directory scaricata dal sito sia all'interno del progetto. In locale il progetto funziona perfettamente, tuttavia la cartella è troppo pesante per essere caricata su GitHub.
+Se necessario posso inviarvi la cartella di progetto attraverso altri mezzi.
