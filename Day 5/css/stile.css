@@ -1,0 +1,299 @@
+/*------------------------------------------- IMPOSTAZIONI GENERALI ---------------------------------------*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 0em 1em 0em 1em;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size:4rem;
+    margin: 1em 0em;}
+h2 {
+    font-size:3.5rem;
+    margin: 0.75em 0em;}
+h3 {
+    font-size: 2.5rem;
+    margin: 0.5em 0em;}
+h4 {
+    font-size: 2.1rem;
+    margin: 1em 0em;
+}
+
+h1, h2, h3 {
+    line-height: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+div {
+    margin: 1em 0em;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+.btn {
+    background: linear-gradient(to right, #6cc1e2, #392f7a);
+    color: white;
+    padding: .5em 1em;
+}
+b {
+    font-size: 1.8rem;
+}
+small {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*----------------------------------------------- HEADER --------------------------------------------------*/
+
+header {
+    background: white;
+    box-shadow: 3px 3px 5px #d3d3d3;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    padding: 1em;
+}
+
+
+header nav #menu {
+    list-style-type: none;
+    display: none;
+    line-height: 4em;
+}
+
+header nav #menu li:hover {
+    background-color: rgb(230, 230, 230);
+    color: white;
+}
+
+header nav #menu li:last-child:hover{
+    background-color: white;
+} 
+
+header .hamburger .icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+
+
+/*--------------------------------------------- MAIN - HOME ------------------------------------------------*/
+main {
+    padding: 0em 2em 0em 2em;
+    box-sizing: border-box;
+}
+
+main .banner {
+    background: url("/images/banner.jpg");
+    background-position: center;
+    background-size:cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+    padding: 1em;
+}
+main article section {
+    background: #0c0633;
+    color: white;
+    margin: 0em -1em;
+    padding: 4em 2em;
+    line-height: 4rem;
+}
+
+main article .box-list div {
+    margin: 3em 0em;
+}
+
+main article .end-article img {
+    width:90%;
+}
+
+main article .end-article ul {
+    list-style-type: none;
+}
+
+/*------------------------------------------- MAIN - CHI SIAMO ----------------------------------------------*/
+main article .chisiamo-main figure {
+    margin-bottom: 1em;;
+}
+main article .chisiamo-main figure img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+main article table {
+    margin: 2em auto 2em auto;
+}
+
+main article table caption {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main article table th {
+    font-weight: bold;
+}
+
+main article table tr:nth-child(odd) {
+    background: #d2dce7;
+}
+/*------------------------------------------- MAIN - CONTATTI ----------------------------------------------*/
+
+main .contatti {
+    display: center;
+}
+
+main .contatti input {
+    margin-bottom: 1em;
+    height: 3em;
+    width: 100%;
+}
+
+main .contatti input:nth-child(5) {
+    height: 5em;
+}
+
+main .contatti input:last-child {
+    width: 70%;
+}
+/*----------------------------------------------- FOOTER --------------------------------------------------*/
+
+footer {
+    background: rgb(238, 238, 238);
+    margin: 0em -1em -1em -1em;
+    padding: 2em 3em;
+    text-align: left;
+}
+
+footer p {
+    margin-bottom: 1em;
+}
+
+footer .ft-cards #newsletter {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+footer .ft-cards #newsletter h4 {
+    text-align: left;
+}
+footer .ft-cards #newsletter input {
+    height: 8vh;
+    width: 80%;
+    
+}
+
+
+/*--------------------------------------------- RESPONSIVE ------------------------------------------------*/
+
+@media screen and (min-width:768px) { /* ------ TABLET -------*/
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img {
+        display: inline;
+    }
+
+    header nav {
+        justify-self: flex-end;
+    }
+    header nav #menu {
+        display: block;
+    }
+    header nav #menu li {
+        display: inline;
+        margin-left: 1em;
+    }
+    
+    header nav #menu li:hover {
+        background-color: rgb(230, 230, 230);
+        color: white;
+    }
+    
+    header nav #menu li:last-child:hover{
+        background-color: white;
+    } 
+    
+    header .hamburger .icon {
+        display: none;
+    }    
+
+    main .banner {
+        width: 100%;
+        margin-left: -1em; 
+
+    }
+
+    main article .box-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;
+        justify-content: center;
+    }
+
+    main article .end-article, main .contatti, main .chisiamo-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+
+    main article .end-article ul {
+        align-self: center;
+    }
+    main article table th {
+        background-color: #7288a0;
+        color: white;
+        font-weight: normal;
+        padding: .5em;
+    }
+
+    main article table td {
+        padding: .5em;
+    }
+
+    footer .ft-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em ;
+    }
+
+    footer .ft-cards #newsletter h4 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1200px) { /* -------- DESKTOP --------*/
+    html {
+        font-size: 75%;
+    }
+
+    main .banner {
+        padding: 5em 10em;
+        box-sizing: border-box;
+    }
+}
